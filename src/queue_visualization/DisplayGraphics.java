@@ -7,6 +7,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.util.Objects;
 
 public class DisplayGraphics extends Canvas {
 
@@ -82,6 +83,8 @@ public class DisplayGraphics extends Canvas {
         enqueueButton.setBackground(new Color(73, 156, 84));
         enqueueButton.setForeground(new Color(33, 37, 43));
         enqueueButton.addActionListener(e -> {
+            if (textField.getText().equals(""))
+                return;
             queue.enqueue(Character.toString(textField.getText().charAt(0)));
             displayGraphics.repaint();
             textField.grabFocus();
