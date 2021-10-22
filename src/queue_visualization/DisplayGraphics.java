@@ -7,7 +7,6 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.util.Objects;
 
 public class DisplayGraphics extends Canvas {
 
@@ -98,6 +97,8 @@ public class DisplayGraphics extends Canvas {
         frame.setResizable(false);
 
         frame.setVisible(true);
+
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         textField.grabFocus();
     }
